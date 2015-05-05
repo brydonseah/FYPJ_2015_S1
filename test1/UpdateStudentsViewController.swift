@@ -41,7 +41,7 @@ class UpdateStudentsViewController: UIViewController, UITextFieldDelegate {
     
         self.imageView.alpha = 0.3 // = UIColor.blackColor().colorWithAlphaComponent(0.3)
     
-        self.imageView.image = UIImage(named:"GreenImg")
+        self.imageView.image = UIImage(named:"projimg")
         //imageView.setbgImageColor(onePixelImageWithColor(bgImageColor))
         
         
@@ -102,15 +102,7 @@ class UpdateStudentsViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func onePixelImageWithColor(color : UIColor) -> UIImage {
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let bitmapInfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue)
-        var context = CGBitmapContextCreate(nil, 1, 1, 8, 0, colorSpace,bitmapInfo)
-        CGContextFillRect(context, CGRectMake(0, 0, 1, 1))
-        let image = UIImage(CGImage: CGBitmapContextCreateImage(context))
-        return image!
-        }
-    
+       
 
 
 

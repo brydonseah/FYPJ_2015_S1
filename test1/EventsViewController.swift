@@ -10,6 +10,7 @@ import UIKit
 
 class EventsViewController: UITableViewController {
 
+    @IBOutlet var imageView: UIImageView!
     
     var events: [Event] = []
     var databasePath = NSString()
@@ -48,7 +49,11 @@ class EventsViewController: UITableViewController {
         
         self.events = self.retrieveDataIntoArray()
         self.tableView.rowHeight = 121
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "projimg"))
+        self.tableView.backgroundView!.alpha = 0.3 // = UIColor.blackColor().colorWithAlphaComponent(0.3)
+
+        
         self.register()
 
     }
@@ -208,8 +213,7 @@ class EventsViewController: UITableViewController {
             }
         })
     }
-
-
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -30,6 +30,9 @@ class StudentDetailsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "projimg"))
+        self.tableView.backgroundView!.alpha = 0.3 // = UIColor.blackColor().colorWithAlphaComponent(0.3)
+        
         
     }
 

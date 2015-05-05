@@ -32,7 +32,11 @@ class ClassPickerTableViewController: UITableViewController {
         if let category = selectedCategory {
             
             selectedCategoryIndex = find(categories, category)!
+            
         }
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "projimg"))
+        self.tableView.backgroundView!.alpha = 0.3 // = UIColor.blackColor().colorWithAlphaComponent(0.3)
     }
 
     override func didReceiveMemoryWarning() {

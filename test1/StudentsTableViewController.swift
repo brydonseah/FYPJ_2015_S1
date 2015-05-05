@@ -48,9 +48,10 @@ class StudentsTableViewController: UITableViewController, UISearchBarDelegate, U
         
         self.students = self.retrieveStudent()
         self.tableView.rowHeight = 100
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         
-                
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "projimg"))
+        self.tableView.backgroundView!.alpha = 0.3 // = UIColor.blackColor().colorWithAlphaComponent(0.3)
+        
         
        
 
@@ -246,10 +247,6 @@ class StudentsTableViewController: UITableViewController, UISearchBarDelegate, U
         }
         
     }
-
-
-
-
     
   /*
     func filterContentForSearchText(searchText: String, scope: String = "All") {

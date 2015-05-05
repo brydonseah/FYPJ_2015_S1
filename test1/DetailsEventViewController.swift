@@ -12,7 +12,7 @@ class DetailsEventViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var dateTimeTextField: UITextField!
     @IBOutlet var eventNameTextField: UITextField!
-    
+    @IBOutlet var imageView: UIImageView!
     
     var event: Event!
     var databasePath = NSString()
@@ -37,6 +37,11 @@ class DetailsEventViewController: UIViewController, UITextFieldDelegate {
 
        eventNameTextField.text = event.title
        dateTimeTextField.text = event.date
+        
+        self.imageView.alpha = 0.3 // = UIColor.blackColor().colorWithAlphaComponent(0.3)
+        
+        self.imageView.image = UIImage(named:"projimg")
+
   
     }
 
@@ -107,6 +112,16 @@ class DetailsEventViewController: UIViewController, UITextFieldDelegate {
         dateChanged(datePickerView)
         dateTimeTextField.resignFirstResponder()
     }
+    
+    func onePixelImageWithColor(color : UIColor) -> UIImage {
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue)
+        var context = CGBitmapContextCreate(nil, 1, 1, 8, 0, colorSpace,bitmapInfo)
+        CGContextFillRect(context, CGRectMake(0, 0, 1, 1))
+        let image = UIImage(CGImage: CGBitmapContextCreateImage(context))
+        return image!
+    }
+
 
     
     

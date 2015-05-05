@@ -91,6 +91,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Cfj-es-hFC">
+                            <rect key="frame" x="0.0" y="255" width="768" height="772"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <sections>
                             <tableViewSection headerTitle="Event Name" id="yoV-iq-3ae">
                                 <cells>
@@ -159,6 +163,7 @@
                         <outlet property="datefield" destination="Ngt-Tw-H2E" id="5qN-Wr-yWw"/>
                         <outlet property="doneButton" destination="2yQ-2n-gzp" id="a03-bW-vEF"/>
                         <outlet property="eventTextField" destination="EWv-RG-KAj" id="GQl-Oh-lHs"/>
+                        <outlet property="imageView" destination="Cfj-es-hFC" id="4QR-MD-eo4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHD-fu-2ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,6 +279,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="in7-Tk-LBj">
+                                <rect key="frame" x="-8" y="57" width="787" height="918"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -288,6 +297,7 @@
                     <connections>
                         <outlet property="dateTimeTextField" destination="6h5-UY-WR3" id="aMt-ld-YpP"/>
                         <outlet property="eventNameTextField" destination="IVJ-9O-GCR" id="rEb-TP-Peo"/>
+                        <outlet property="imageView" destination="in7-Tk-LBj" id="9vp-0Z-Hc9"/>
                         <segue destination="Enf-SE-c8u" kind="unwind" identifier="UpdateEventDetail" unwindAction="unwindEventDetail:" id="cdg-nX-cLw"/>
                     </connections>
                 </viewController>
@@ -719,6 +729,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="LBO-yj-sYh">
+                            <rect key="frame" x="0.0" y="130" width="768" height="936"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" textLabel="aAq-ki-rUm" style="IBUITableViewCellStyleDefault" id="Cox-NW-Ybw">
                                 <rect key="frame" x="0.0" y="86" width="768" height="44"/>

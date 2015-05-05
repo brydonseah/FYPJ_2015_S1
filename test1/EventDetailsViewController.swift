@@ -10,6 +10,7 @@ import UIKit
 
 class EventDetailsViewController: UITableViewController {
     @IBOutlet var eventTextField: UITextField!
+    @IBOutlet var imageView: UIImageView!
     var event:Event!
     var datePickerView:UIDatePicker!
     var inputDateView:UIView!
@@ -28,6 +29,11 @@ class EventDetailsViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.imageView.alpha = 0.3 // = UIColor.blackColor().colorWithAlphaComponent(0.3)
+        
+        self.imageView.image = UIImage(named:"projimg")
+        //imageView.setbgImageColor(onePixelImageWithColor(bgImageColor))
         
     }
     
@@ -83,6 +89,8 @@ class EventDetailsViewController: UITableViewController {
         datefield.resignFirstResponder()
         
     }
+    
+ 
     
 }
 
